@@ -1,0 +1,15 @@
+export default {
+  FONT_SIZE: 16,
+  FONT_SIZE_S: 12,
+  FONT_SIZE_L: 20,
+  FONT_SIZE_XL: 28,
+  FONT_SIZE_XXL: 36,
+  PRIMARY: "#68b2bc",
+  RED: "#dd751f",
+  GREEN: "#7bbe64",
+  GREY_LIGHT: "#f5f5f5",
+  MID_GREY: "#555555",
+  DARK_GREY: "#121212",
+  TEXT_COLOR: "#121212",
+  BORDER_RADIUS: 12,
+};
