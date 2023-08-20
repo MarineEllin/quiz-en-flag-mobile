@@ -9,7 +9,6 @@ export default function Flags() {
   const image = country.src;
   const duration = Constants.DURATION_ANIMATION_FLAGS_AND_ANSWERS_IN_OUT;
   const translateX = Constants.FLAG_TRANSLATION;
-  console.log(country);
 
   const entering = () => {
     "worklet";

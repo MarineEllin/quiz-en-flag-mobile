@@ -4,6 +4,7 @@ import {
   Image,
   View,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
 import variable from "../../assets/style/variable.style";
 import { FontAwesome } from "@expo/vector-icons";
@@ -12,7 +13,7 @@ import useStopGame from "../../Hooks/useStopGame/useStopGame";
 export default function Header() {
   const stopGame = useStopGame();
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.AndroidSafeArea}>
       <View style={styles.headerContainer}>
         <Image
           source={require("../../../public/logo.jpeg")}
@@ -44,5 +45,8 @@ const styles = StyleSheet.create({
     color: variable.PRIMARY,
     fontSize: variable.FONT_SIZE_XXL,
     textAlign: "center",
+  },
+  AndroidSafeArea: {
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });

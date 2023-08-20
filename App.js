@@ -1,4 +1,4 @@
-import { StyleSheet, View, StatusBar, SafeAreaView } from "react-native";
+import { StyleSheet, View, StatusBar } from "react-native";
 import variable from "./src/assets/style/variable.style";
 import Header from "./src/components/Header/Header";
 import Homepage from "./src/pages/Homepage/Homepage";
