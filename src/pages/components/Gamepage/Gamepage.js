@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Score from "./Score/Score";
 import Timer from "./Timer/Timer";
 import Flags from "./Flags/Flags";
