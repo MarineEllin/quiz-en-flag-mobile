@@ -1,7 +1,9 @@
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { useRecoilValue, useRecoilState } from "recoil";
+import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
+import { useRecoilValue, useRecoilState, useSetRecoilState } from "recoil";
 import {
-  countriesState,
+  addTimeRightAnswerState,
+  animateScoreState,
+  displayFlagState,
   possibleAnswersState,
   scoreState,
   selectedCountryIndexState,
@@ -18,18 +20,25 @@ export default function Answers() {
   const [disableBtn, setDisableBtn] = useState(false);
   const [score, setScore] = useRecoilState(scoreState);
   const nextFlag = useNextFlag();
+  const setDisplayFlag = useSetRecoilState(displayFlagState);
+  const setaddTimeRightAnswer = useSetRecoilState(addTimeRightAnswerState);
+  const setAnimateScore = useSetRecoilState(animateScoreState);
 
   const checkAnswer = (index) => {
     setSelectedIndex(index);
     setDisableBtn(true);
     if (index === countryIndex) {
       setScore(score + 1);
+      setaddTimeRightAnswer(true);
+      setAnimateScore(true);
     }
+    setDisplayFlag(false);
     setTimeout(() => {
+      setAnimateScore(false);
       setSelectedIndex();
       setDisableBtn(false);
       nextFlag();
-    }, Constants.TIMER_NEXT_FLAG);
+    }, Constants.DURATION_ANIMATION_FLAGS_AND_ANSWERS_IN_OUT);
   };
 
   const buttonStyle = (index) => {
@@ -53,6 +62,7 @@ export default function Answers() {
     <View style={styles.answersContainer}>
       {possibleAnswers.map((answer) => (
         <TouchableOpacity
+          key={possibleAnswers.findIndex((a) => a.en === answer.en)}
           style={buttonStyle(
             possibleAnswers.findIndex((a) => a.en === answer.en)
           )}

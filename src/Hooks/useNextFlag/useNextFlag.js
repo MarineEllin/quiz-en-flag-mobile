@@ -1,18 +1,19 @@
-import { useRecoilValue, useRecoilState, useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import {
   countriesState,
-  possibleAnswersState,
-  scoreState,
-  selectedCountryState,
+  displayAnswersState,
+  displayFlagState,
 } from "../../recoilstate/atom";
 import { Constants } from "../../constants/constants";
-import { countriesWithUrl } from "datas/flagsImage";
 
 function useNextFlag() {
   const [countries, setCountries] = useRecoilState(countriesState);
+  const [displayFlag, setDisplayFlag] = useRecoilState(displayFlagState);
+
   function nextFlag() {
     setTimeout(() => {
       setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
+      setDisplayFlag(true);
     }, Constants.TIMEOUT_NEW_FLAG);
   }
   return nextFlag;

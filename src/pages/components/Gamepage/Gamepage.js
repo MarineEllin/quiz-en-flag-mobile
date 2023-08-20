@@ -4,11 +4,12 @@ import Timer from "./Timer/Timer";
 import Flags from "./Flags/Flags";
 import Answers from "./Answers/Answers";
 import variable from "../../../assets/style/variable.style";
-import { timeoutState } from "../../../recoilstate/atom";
+import { displayFlagState, timeoutState } from "../../../recoilstate/atom";
 import LostPage from "../LostPage/LostPage";
 import { useRecoilValue } from "recoil";
 export default function Gamepage() {
   const timeout = useRecoilValue(timeoutState);
+  const displayFlag = useRecoilValue(displayFlagState);
   return (
     <View>
       {timeout ? (
@@ -20,7 +21,7 @@ export default function Gamepage() {
             <Timer />
           </View>
           <View style={styles.flagsContainer}>
-            <Flags />
+            {displayFlag ? <Flags /> : <View style={styles.flagEmpty} />}
             <Answers />
           </View>
         </View>
@@ -38,10 +39,9 @@ const styles = StyleSheet.create({
   },
   scoreContainer: {
     display: "flex",
-    flex: 1,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "space-between",
     paddingHorizontal: 50,
     paddingVertical: 30,
   },
@@ -56,5 +56,11 @@ const styles = StyleSheet.create({
     borderRadius: variable.BORDER_RADIUS,
     padding: 30,
     width: "100%",
+    overflow: "hidden",
+  },
+  flagEmpty: { width: 180, height: 180, marginBottom: 50 },
+  answersEmpty: {
+    height: 600,
+    width: 400,
   },
 });

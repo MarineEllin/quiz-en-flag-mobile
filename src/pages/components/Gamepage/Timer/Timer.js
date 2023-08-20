@@ -1,29 +1,50 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Animated } from "react-native";
 import variable from "../../../../assets/style/variable.style";
 import { useEffect, useState } from "react";
 import { Constants } from "../../../../constants/constants";
-import { useSetRecoilState } from "recoil";
-import { timeoutState } from "../../../../recoilstate/atom";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import {
+  addTimeRightAnswerState,
+  displayFlagState,
+  timeoutState,
+  timerState,
+} from "../../../../recoilstate/atom";
 
 export default function Timer() {
-  const [timer, setTimer] = useState(Constants.TIMER_GAME_IN_MS);
+  const [timer, setTimer] = useRecoilState(timerState);
   const setTimeoutState = useSetRecoilState(timeoutState);
+  const [addTimeRightAnswer, setAddTimeRightAnswer] = useRecoilState(
+    addTimeRightAnswerState
+  );
+  const setDisplayFlag = useSetRecoilState(displayFlagState);
 
   useEffect(() => {
-    setTimeout(() => {
-      setTimer(timer - Constants.TIME_DECREASE);
+    const timeoutID = setTimeout(() => {
+      if (timer > 0 && addTimeRightAnswer) {
+        setTimer(
+          timer - Constants.TIME_DECREASE + Constants.TIMER_INCREASE_GOOD_ANSWER
+        );
+      } else if (timer > 0 && !addTimeRightAnswer) {
+        setTimer(timer - Constants.TIME_DECREASE);
+      } else if (timer <= 0) {
+        setDisplayFlag(false);
+        setTimeout(() => {
+          setTimeoutState(true);
+        }, Constants.DURATION_ANIMATION_FLAGS_AND_ANSWERS_IN_OUT);
+      }
+      setAddTimeRightAnswer(false);
     }, Constants.TIMER_UPDATE);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timeoutID);
     };
-  }, [timer]);
-
-  useEffect(() => {
-    if (timer <= 0) {
-      setTimeoutState(true);
-    }
-  });
+  }, [
+    timer,
+    setTimer,
+    addTimeRightAnswer,
+    setAddTimeRightAnswer,
+    setTimeoutState,
+  ]);
 
   return (
     <View style={styles.timerContainer}>
@@ -40,7 +61,8 @@ export default function Timer() {
           position: "absolute",
           zIndex: -1,
           bottom: 0,
-          backgroundColor: variable.PRIMARY,
+          backgroundColor:
+            timer > Constants.TIMER_ALERT ? variable.PRIMARY : variable.RED,
           height: "100%",
           justifyContent: "center",
           alignItems: "center",
@@ -48,6 +70,13 @@ export default function Timer() {
           height: (timer / Constants.CONVERT_MS_AND_S) * 2,
         }}
       ></View>
+      {addTimeRightAnswer ? (
+        <View>
+          <Text>+1s</Text>
+        </View>
+      ) : (
+        ""
+      )}
     </View>
   );
 }

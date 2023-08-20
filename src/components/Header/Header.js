@@ -12,8 +12,8 @@ import useStopGame from "../../Hooks/useStopGame/useStopGame";
 export default function Header() {
   const stopGame = useStopGame();
   return (
-    <SafeAreaView style={styles.headerContainer}>
-      <View>
+    <SafeAreaView>
+      <View style={styles.headerContainer}>
         <Image
           source={require("../../../public/logo.jpeg")}
           style={styles.logo}
@@ -29,19 +29,20 @@ export default function Header() {
 const styles = StyleSheet.create({
   headerContainer: {
     display: "flex",
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: variable.DARK_GREY,
     paddingTop: 10,
   },
   logo: {
-    width: 300,
+    width: 250,
     resizeMode: "contain",
+    marginRight: 20,
   },
   powerIcon: {
     color: variable.PRIMARY,
     fontSize: variable.FONT_SIZE_XXL,
     textAlign: "center",
-    marginBottom: 10,
   },
 });

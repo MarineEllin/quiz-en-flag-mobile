@@ -1,11 +1,23 @@
 import { Constants } from "../constants/constants";
 import { atom, selector } from "recoil";
 import { countriesWithUrl } from "../datas/flagsImage";
+import { Animated } from "react-native";
+import { useRef, useState } from "react";
 
 // Timer
 
+export const timerState = atom({
+  key: "timerState",
+  default: Constants.TIMER_GAME_IN_MS,
+});
+
 export const timeoutState = atom({
   key: "timeoutState",
+  default: false,
+});
+
+export const addTimeRightAnswerState = atom({
+  key: "addTimeRightAnswerState",
   default: false,
 });
 
@@ -21,6 +33,11 @@ export const loadingPageState = atom({
 export const scoreState = atom({
   key: "scoreState",
   default: 0,
+});
+
+export const animateScoreState = atom({
+  key: "animateScoreState",
+  default: false,
 });
 
 //Countries and possible answers
@@ -77,4 +94,10 @@ export const selectedCountryIndexState = selector({
 export const displayRightAnswerState = atom({
   key: "displayRightAnswerState",
   default: false,
+});
+
+//Active animations
+export const displayFlagState = atom({
+  key: "displayFlagState",
+  default: true,
 });

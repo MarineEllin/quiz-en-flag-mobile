@@ -1,19 +1,16 @@
-import { useSetRecoilState } from "recoil";
-import {
-  loadingPageState,
-  scoreState,
-  timeoutState,
-} from "../../recoilstate/atom";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { displayFlagState, loadingPageState } from "../../recoilstate/atom";
+import { Constants } from "constants/constants";
 
 function useStopGame() {
-  const setTimeoutState = useSetRecoilState(timeoutState);
   const setLoadingGame = useSetRecoilState(loadingPageState);
-  const setScore = useSetRecoilState(scoreState);
-
+  const setDisplayFlag = useSetRecoilState(displayFlagState);
   function stopGame() {
-    setLoadingGame(true);
+    setDisplayFlag(false);
+    setTimeout(() => {
+      setLoadingGame(true);
+    }, Constants.DURATION_ANIMATION_FLAGS_AND_ANSWERS_IN_OUT);
   }
-
   return stopGame;
 }
 

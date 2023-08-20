@@ -17,7 +17,7 @@ export const countriesWithUrl = [
   {
     en: "American Samoa",
     fr: "Samoa américaines",
-    src: require("../../public/flags/American Samoa.png"),
+    src: require("../../public/flags/AmericanSamoa.png"),
   },
   {
     en: "Andorra",
@@ -37,7 +37,7 @@ export const countriesWithUrl = [
   {
     en: "Antigua and Barbuda",
     fr: "Antigua-et-Barbuda",
-    src: require("../../public/flags/Antigua and Barbuda.png"),
+    src: require("../../public/flags/AntiguaandBarbuda.png"),
   },
   {
     en: "Argentina",
@@ -167,12 +167,12 @@ export const countriesWithUrl = [
   {
     en: "Cayman Islands",
     fr: "Îles Caïmans",
-    src: require("../../public/flags/Cayman Islands.png"),
+    src: require("../../public/flags/CaymanIslands.png"),
   },
   {
     en: "Central African Republic",
     fr: "République centrafricaine",
-    src: require("../../public/flags/Central African Republic.png"),
+    src: require("../../public/flags/CentralAfricanRepublic.png"),
   },
   {
     en: "Chad",
@@ -192,12 +192,12 @@ export const countriesWithUrl = [
   {
     en: "Christmas Island",
     fr: "Île Christmas",
-    src: require("../../public/flags/Christmas Island.png"),
+    src: require("../../public/flags/ChristmasIsland.png"),
   },
   {
     en: "Cocos (Keeling) Islands",
     fr: "Îles Cocos",
-    src: require("../../public/flags/Cocos (Keeling) Islands.png"),
+    src: require("../../public/flags/CocosIslands.png"),
   },
   {
     en: "Colombia",
@@ -212,17 +212,17 @@ export const countriesWithUrl = [
   {
     en: "Cook Islands",
     fr: "Îles Cook",
-    src: require("../../public/flags/Cook Islands.png"),
+    src: require("../../public/flags/CookIslands.png"),
   },
   {
     en: "Costa Rica",
     fr: "Costa Rica",
-    src: require("../../public/flags/Costa Rica.png"),
+    src: require("../../public/flags/CostaRica.png"),
   },
   {
     en: "Cote d'Ivoire",
     fr: "Côte d'Ivoire",
-    src: require("../../public/flags/Cote d'Ivoire.png"),
+    src: require("../../public/flags/CoteIvoire.png"),
   },
   {
     en: "Croatia",
@@ -242,7 +242,7 @@ export const countriesWithUrl = [
   {
     en: "Czech Republic",
     fr: "République tchèque",
-    src: require("../../public/flags/Czech Republic.png"),
+    src: require("../../public/flags/CzechRepublic.png"),
   },
   {
     en: "Denmark",
@@ -262,12 +262,12 @@ export const countriesWithUrl = [
   {
     en: "Dominican Republic",
     fr: "République dominicaine",
-    src: require("../../public/flags/Dominican Republic.png"),
+    src: require("../../public/flags/DominicanRepublic.png"),
   },
   {
     en: "East Timor",
     fr: "Timor",
-    src: require("../../public/flags/East Timor.png"),
+    src: require("../../public/flags/EastTimor.png"),
   },
   {
     en: "Ecuador",
@@ -282,7 +282,7 @@ export const countriesWithUrl = [
   {
     en: "El Salvador",
     fr: "Salvador",
-    src: require("../../public/flags/El Salvador.png"),
+    src: require("../../public/flags/ElSalvador.png"),
   },
   {
     en: "England",
@@ -292,7 +292,7 @@ export const countriesWithUrl = [
   {
     en: "Equatorial Guinea",
     fr: "Guinée équatoriale",
-    src: require("../../public/flags/Equatorial Guinea.png"),
+    src: require("../../public/flags/EquatorialGuinea.png"),
   },
   {
     en: "Eritrea",
@@ -312,7 +312,7 @@ export const countriesWithUrl = [
   {
     en: "Falkland Islands",
     fr: "Îles Malouines",
-    src: require("../../public/flags/Falkland Islands.png"),
+    src: require("../../public/flags/FalklandIslands.png"),
   },
   {
     en: "Fiji",
@@ -332,7 +332,7 @@ export const countriesWithUrl = [
   {
     en: "French Polynesia",
     fr: "Polynésie française",
-    src: require("../../public/flags/French Polynesia.png"),
+    src: require("../../public/flags/FrenchPolynesia.png"),
   },
   {
     en: "Gabon",
@@ -387,7 +387,7 @@ export const countriesWithUrl = [
   {
     en: "Guinea Bissau",
     fr: "Guinée-Bissao",
-    src: require("../../public/flags/Guinea Bissau.png"),
+    src: require("../../public/flags/GuineaBissau.png"),
   },
   {
     en: "Guyana",
@@ -407,7 +407,7 @@ export const countriesWithUrl = [
   {
     en: "Hong-Kong",
     fr: "Hong-Kong",
-    src: require("../../public/flags/Hong-Kong.png"),
+    src: require("../../public/flags/HongKong.png"),
   },
   {
     en: "Hungary",
@@ -577,7 +577,7 @@ export const countriesWithUrl = [
   {
     en: "Marshall Islands",
     fr: "Îles Marshall",
-    src: require("../../public/flags/Marshall Islands.png"),
+    src: require("../../public/flags/MarshallIslands.png"),
   },
   {
     en: "Mauritania",
@@ -667,7 +667,7 @@ export const countriesWithUrl = [
   {
     en: "New Zealand",
     fr: "Nouvelle-Zélande",
-    src: require("../../public/flags/New Zealand.png"),
+    src: require("../../public/flags/NewZealand.png"),
   },
   {
     en: "Nicaragua",
@@ -692,17 +692,17 @@ export const countriesWithUrl = [
   {
     en: "Norfolk Island",
     fr: "Île Norfolk",
-    src: require("../../public/flags/Norfolk Island.png"),
+    src: require("../../public/flags/NorfolkIsland.png"),
   },
   {
     en: "North Korea",
     fr: "Corée du Nord",
-    src: require("../../public/flags/North Korea.png"),
+    src: require("../../public/flags/NorthKorea.png"),
   },
   {
     en: "Northern Mariana Islands",
     fr: "Îles Mariannes du Nord",
-    src: require("../../public/flags/Northern Mariana Islands.png"),
+    src: require("../../public/flags/NorthernMarianaIslands.png"),
   },
   {
     en: "Norway",
@@ -737,7 +737,7 @@ export const countriesWithUrl = [
   {
     en: "Papua New Guinea",
     fr: "Papouasie-Nouvelle-Guinée",
-    src: require("../../public/flags/Papua New Guinea.png"),
+    src: require("../../public/flags/PapuaNewGuinea.png"),
   },
   {
     en: "Paraguay",
@@ -757,7 +757,7 @@ export const countriesWithUrl = [
   {
     en: "Pitcairn Islands",
     fr: "Îles Pitcairn",
-    src: require("../../public/flags/Pitcairn Islands.png"),
+    src: require("../../public/flags/PitcairnIslands.png"),
   },
   {
     en: "Poland",
@@ -772,7 +772,7 @@ export const countriesWithUrl = [
   {
     en: "Puerto Rico",
     fr: "Porto Rico",
-    src: require("../../public/flags/Puerto Rico.png"),
+    src: require("../../public/flags/PuertoRico.png"),
   },
   {
     en: "Qatar",
@@ -782,7 +782,7 @@ export const countriesWithUrl = [
   {
     en: "Republic of the Congo",
     fr: "République du Congo",
-    src: require("../../public/flags/Republic of the Congo.png"),
+    src: require("../../public/flags/RepublicoftheCongo.png"),
   },
   {
     en: "Romania",
@@ -802,22 +802,22 @@ export const countriesWithUrl = [
   {
     en: "Saint Kitts and Nevis",
     fr: "St-Christophe-et-Niévès",
-    src: require("../../public/flags/Saint Kitts and Nevis.png"),
+    src: require("../../public/flags/SaintKittsandNevis.png"),
   },
   {
     en: "Saint Lucia",
     fr: "Sainte-Lucie",
-    src: require("../../public/flags/Saint Lucia.png"),
+    src: require("../../public/flags/SaintLucia.png"),
   },
   {
     en: "Saint Vincent and the Grenadines",
     fr: "St-Vincent-et-les-Grenadines",
-    src: require("../../public/flags/Saint Vincent and the Grenadines.png"),
+    src: require("../../public/flags/SaintVincentGrenadines.png"),
   },
   {
     en: "Saint-Pierre and Miquelon",
     fr: "St-Pierre and Miquelon",
-    src: require("../../public/flags/Saint-Pierre and Miquelon.png"),
+    src: require("../../public/flags/SaintPierreMiquelon.png"),
   },
   {
     en: "Samoa",
@@ -827,17 +827,17 @@ export const countriesWithUrl = [
   {
     en: "San Marino",
     fr: "Saint-Marin",
-    src: require("../../public/flags/San Marino.png"),
+    src: require("../../public/flags/SanMarino.png"),
   },
   {
     en: "Sao Tome and Principe",
     fr: "Sao Tomé et Principe",
-    src: require("../../public/flags/Sao Tome and Principe.png"),
+    src: require("../../public/flags/SaoTomeandPrincipe.png"),
   },
   {
     en: "Saudi Arabia",
     fr: "Arabie saoudite",
-    src: require("../../public/flags/Saudi Arabia.png"),
+    src: require("../../public/flags/SaudiArabia.png"),
   },
   {
     en: "Scotland",
@@ -857,7 +857,7 @@ export const countriesWithUrl = [
   {
     en: "Sierra Leone",
     fr: "Sierra Leone",
-    src: require("../../public/flags/Sierra Leone.png"),
+    src: require("../../public/flags/SierraLeone.png"),
   },
   {
     en: "Singapore",
@@ -877,7 +877,7 @@ export const countriesWithUrl = [
   {
     en: "Solomon Islands",
     fr: "Îles Salomon",
-    src: require("../../public/flags/Solomon Islands.png"),
+    src: require("../../public/flags/SolomonIslands.png"),
   },
   {
     en: "Somalia",
@@ -887,17 +887,17 @@ export const countriesWithUrl = [
   {
     en: "South Africa",
     fr: "Afrique du Sud",
-    src: require("../../public/flags/South Africa.png"),
+    src: require("../../public/flags/SouthAfrica.png"),
   },
   {
     en: "South Korea",
     fr: "Corée du Sud",
-    src: require("../../public/flags/South Korea.png"),
+    src: require("../../public/flags/SouthKorea.png"),
   },
   {
     en: "South Sudan",
     fr: "Soudan du Sud",
-    src: require("../../public/flags/South Sudan.png"),
+    src: require("../../public/flags/SouthSudan.png"),
   },
   {
     en: "Spain",
@@ -907,7 +907,7 @@ export const countriesWithUrl = [
   {
     en: "Sri Lanka",
     fr: "Sri Lanka",
-    src: require("../../public/flags/Sri Lanka.png"),
+    src: require("../../public/flags/SriLanka.png"),
   },
   {
     en: "Sudan",
@@ -967,7 +967,7 @@ export const countriesWithUrl = [
   {
     en: "Trinidad and Tobago",
     fr: "Trinité-et-Tobago",
-    src: require("../../public/flags/Trinidad and Tobago.png"),
+    src: require("../../public/flags/TrinidadandTobago.png"),
   },
   {
     en: "Tunisia",
@@ -987,7 +987,7 @@ export const countriesWithUrl = [
   {
     en: "Turks and Caicos Islands",
     fr: "Îles Turques-et-Caïques",
-    src: require("../../public/flags/Turks and Caicos Islands.png"),
+    src: require("../../public/flags/TurksandCaicosIslands.png"),
   },
   {
     en: "Tuvalu",
@@ -1007,12 +1007,12 @@ export const countriesWithUrl = [
   {
     en: "United Arab Emirates",
     fr: "Émirats arabes unis",
-    src: require("../../public/flags/United Arab Emirates.png"),
+    src: require("../../public/flags/UnitedArabEmirates.png"),
   },
   {
     en: "United Kingdom",
     fr: "Royaume-Uni",
-    src: require("../../public/flags/United Kingdom.png"),
+    src: require("../../public/flags/UnitedKingdom.png"),
   },
   {
     en: "United-States",
@@ -1057,7 +1057,7 @@ export const countriesWithUrl = [
   {
     en: "Wallis and Futuna",
     fr: "Wallis et Futuna",
-    src: require("../../public/flags/Wallis and Futuna.png"),
+    src: require("../../public/flags/WallisandFutuna.png"),
   },
   {
     en: "Yemen",
