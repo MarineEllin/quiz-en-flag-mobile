@@ -51,8 +51,7 @@ export const selectedCountryState = selector({
   key: "selectedCountryState",
   get: ({ get }) => {
     const [...countriesWithUrl] = get(countriesState);
-    const selectedCountrie =
-      countriesWithUrl[Math.floor(countriesWithUrl.length * Math.random())];
+    const selectedCountrie = countriesWithUrl[0];
     return selectedCountrie;
   },
 });
@@ -60,17 +59,12 @@ export const selectedCountryState = selector({
 export const possibleAnswersState = selector({
   key: "possibleAnswersState",
   get: ({ get }) => {
-    const selectedCountry = get(selectedCountryState);
+    const [...countriesWithUrl] = get(countriesState);
+    const answer0 = countriesWithUrl[0];
+    const answer1 = countriesWithUrl[1];
+    const answer2 = countriesWithUrl[2];
 
-    const answer1 = [...countriesWithUrl].filter((c) => c !== selectedCountry)[
-      Math.floor(countriesWithUrl.length * Math.random())
-    ];
-
-    const answer2 = [...countriesWithUrl].filter(
-      (c) => c !== selectedCountry && c !== answer1
-    )[Math.floor(countriesWithUrl.length * Math.random())];
-
-    const possibleAnswers = [selectedCountry, answer1, answer2];
+    const possibleAnswers = [answer0, answer1, answer2];
     const shuffledPossibleAnswers = possibleAnswers.sort(
       (a, b) => 0.5 - Math.random()
     );
@@ -84,7 +78,7 @@ export const selectedCountryIndexState = selector({
     const possibleAnswers = get(possibleAnswersState);
     const selectedCountry = get(selectedCountryState);
     const selectedCountryIndex = possibleAnswers.findIndex(
-      (answer) => answer.en === selectedCountry.en
+      (answer) => answer === selectedCountry
     );
     return selectedCountryIndex;
   },

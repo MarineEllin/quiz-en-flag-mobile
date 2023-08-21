@@ -62,12 +62,10 @@ export default function Answers() {
     <View style={styles.answersContainer}>
       {possibleAnswers.map((answer) => (
         <TouchableOpacity
-          key={possibleAnswers.findIndex((a) => a.en === answer.en)}
-          style={buttonStyle(
-            possibleAnswers.findIndex((a) => a.en === answer.en)
-          )}
+          key={possibleAnswers.findIndex((a) => a === answer)}
+          style={buttonStyle(possibleAnswers.findIndex((a) => a === answer))}
           onPress={() =>
-            checkAnswer(possibleAnswers.findIndex((a) => a.en === answer.en))
+            checkAnswer(possibleAnswers.findIndex((a) => a === answer))
           }
           disabled={disableBtn}
         >

@@ -1,14 +1,10 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
-import {
-  countriesState,
-  displayAnswersState,
-  displayFlagState,
-} from "../../recoilstate/atom";
+import { countriesState, displayFlagState } from "../../recoilstate/atom";
 import { Constants } from "../../constants/constants";
 
 function useNextFlag() {
   const [countries, setCountries] = useRecoilState(countriesState);
-  const [displayFlag, setDisplayFlag] = useRecoilState(displayFlagState);
+  const setDisplayFlag = useSetRecoilState(displayFlagState);
 
   function nextFlag() {
     setTimeout(() => {
