@@ -6,14 +6,16 @@ import useStopGame from "../../Hooks/useStopGame/useStopGame";
 export default function Header() {
   const stopGame = useStopGame();
   return (
-    <View style={styles.headerContainer}>
-      <Image
-        source={require("../../../public/logo.jpeg")}
-        style={styles.logo}
-      ></Image>
-      <TouchableOpacity onPress={stopGame}>
-        <FontAwesome name="power-off" style={styles.powerIcon} />
-      </TouchableOpacity>
+    <View>
+      <View style={styles.headerContainer}>
+        <Image
+          source={require("../../../public/logo.jpeg")}
+          style={styles.logo}
+        ></Image>
+        <TouchableOpacity onPress={stopGame}>
+          <FontAwesome name="power-off" style={styles.powerIcon} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -36,5 +38,8 @@ const styles = StyleSheet.create({
     color: variable.PRIMARY,
     fontSize: variable.FONT_SIZE_XXL,
     textAlign: "center",
+  },
+  AndroidSafeArea: {
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
